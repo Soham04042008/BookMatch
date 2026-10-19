@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f1e8" />
+  <title>BookMatch — Find Your Next Read</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="#home"><span class="brand-icon">b.</span> bookmatch</a>
+    <div class="nav-links"><a href="#discover">Discover</a><a href="#how">How it works</a><a href="#saved">Your shelf <span id="savedCount">0</span></a></div>
+    <a class="nav-button" href="#discover">Find my next read <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+  </nav>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEXT CHAPTER STARTS HERE</p>
+        <h1>There's a book<br>for every <em>mood.</em></h1>
+        <p class="hero-text">Tell us how you're feeling. We'll help you find the story you didn't know you needed.</p>
+        <a class="primary-button" href="#discover">Match me with a book <span>↘</span></a>
+        <div class="reader-proof"><div class="avatars"><span>J</span><span>M</span><span>A</span><span>+</span></div><p><strong>Good books, better moods.</strong><br><small>A tiny corner for curious readers.</small></p></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-sun"></div><div class="sparkle sparkle-a">✳</div><div class="sparkle sparkle-b">✦</div>
+        <div class="book book-back"><div class="book-cover cover-sage"><small>THE ART OF</small><strong>NOTICING</strong><i>little things, deeply</i><span class="cover-flower">✿</span></div></div>
+        <div class="book book-mid"><div class="book-cover cover-pink"><small>A NOVEL</small><strong>THE<br>OTHER<br>SIDE</strong><i>of ordinary days</i><span class="cover-circle"></span></div></div>
+        <div class="book book-front"><div class="book-cover cover-orange"><small>POEMS FOR</small><strong>SLOW<br>MORNINGS</strong><i>and softer nights</i><span class="cover-sun">☼</span></div></div>
+        <div class="visual-note">YOUR NEXT<br>FAVOURITE ↗</div>
+        <span class="visual-caption">A GOOD STORY CHANGES EVERYTHING.</span>
+      </div>
+      <div class="hero-footer"><span>READ WHAT FEELS RIGHT</span><span class="footer-line"></span><span>BOOKMATCH / 001</span></div>
+    </section>
+
+    <section class="discover section" id="discover">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 — YOUR READING MOOD</p><h2>What are you<br><em>in the mood for?</em></h2></div>
+        <p class="heading-note">No endless scrolling. Pick a feeling and let the right story find you.</p>
+      </div>
+      <div class="mood-grid" id="moodGrid">
+        <button class="mood-card mood-cozy selected" data-mood="cozy"><span class="mood-emoji">☕</span><span class="mood-name">Cozy & calm</span><span class="mood-desc">A warm blanket for your brain</span><span class="mood-arrow">↗</span></button>
+        <button class="mood-card mood-adventure" data-mood="adventure"><span class="mood-emoji">✈</span><span class="mood-name">Adventure</span><span class="mood-desc">Take me somewhere new</span><span class="mood-arrow">↗</span></button>
+        <button class="mood-card mood-mystery" data-mood="mystery"><span class="mood-emoji">☾</span><span class="mood-name">Mystery & twists</span><span class="mood-desc">One more chapter. Promise.</span><span class="mood-arrow">↗</span></button>
+        <button class="mood-card mood-growth" data-mood="growth"><span class="mood-emoji">✿</span><span class="mood-name">Personal growth</span><span class="mood-desc">A little wiser, one page at a time</span><span class="mood-arrow">↗</span></button>
+        <button class="mood-card mood-romance" data-mood="romance"><span class="mood-emoji">♡</span><span class="mood-name">Romance</span><span class="mood-desc">Butterflies in paperback form</span><span class="mood-arrow">↗</span></button>
+        <button class="mood-card mood-thought" data-mood="thought"><span class="mood-emoji">☁</span><span class="mood-name">Make me think</span><span class="mood-desc">Stories that stay with you</span><span class="mood-arrow">↗</span></button>
+      </div>
+      <div class="recommendation-head"><div><p class="eyebrow">02 — YOUR MATCHES</p><h2 id="matchTitle">A softer kind of story.</h2></div><span class="match-count" id="matchCount">03 BOOK MATCHES</span></div>
+      <div class="book-grid" id="bookGrid" aria-live="polite"></div>
+      <p class="disclaimer">BookMatch is a student concept project. Recommendations are curated examples, not a professional or AI-generated reading assessment.</p>
+    </section>
+
+    <section class="how section" id="how">
+      <div class="how-left"><p class="eyebrow">03 — A SIMPLE LITTLE RITUAL</p><h2>Less searching.<br><em>More feeling.</em></h2><p>Finding your next favourite shouldn't feel like homework. BookMatch makes discovering a book feel personal, playful, and easy.</p><a class="text-link" href="#discover">Find your mood <span>↗</span></a></div>
+      <div class="steps">
+        <div class="step"><span class="step-number">01</span><div><h3>Check in with yourself</h3><p>Choose the feeling you want your next book to bring.</p></div><span class="step-icon">☼</span></div>
+        <div class="step"><span class="step-number">02</span><div><h3>Meet your matches</h3><p>Explore a small, curated list that fits your mood.</p></div><span class="step-icon">⌕</span></div>
+        <div class="step"><span class="step-number">03</span><div><h3>Save it for later</h3><p>Keep interesting titles on your own little reading shelf.</p></div><span class="step-icon">♡</span></div>
+      </div>
+    </section>
+
+    <section class="shelf section" id="saved">
+      <div class="section-heading"><div><p class="eyebrow">04 — YOUR LITTLE LIBRARY</p><h2>Keep the ones<br><em>that call to you.</em></h2></div><p class="heading-note">Tap the heart on any book to save it here. Your shelf stays saved in this browser.</p></div>
+      <div class="saved-grid" id="savedGrid"><div class="empty-shelf"><span>♡</span><h3>Your shelf is waiting.</h3><p>Save a book you like and it'll show up here.</p><a href="#discover">Explore books ↗</a></div></div>
+    </section>
+
+    <section class="closing"><span class="closing-star">✳</span><p class="eyebrow">A NOTE TO THE READER</p><h2>One page can<br>change your <em>day.</em></h2><a class="primary-button" href="#discover">Find that page <span>↗</span></a><p class="closing-small">Made for readers, daydreamers, and “just one more chapter” people.</p></section>
+  </main>
+  <footer><a class="brand" href="#home"><span class="brand-icon">b.</span> bookmatch</a><span>FIND THE STORY THAT FINDS YOU.</span><a href="#home" class="back-top">BACK TO TOP ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
